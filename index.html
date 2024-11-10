@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SearchMovies</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-800 text-white">
+    <nav class="bg-gray-900 p-4 mb-6 flex items-center space-x-4">
+      <h1 class="text-4xl font-extrabold italic tracking-tight text-gray-400 whitespace-nowrap">
+        asearchaway<span class="font-light">.com</span>
+      </h1>
+      <div class="relative w-full">
+        <input
+          type="text"
+          id="search"
+          class="bg-gray-700 rounded-full p-2 pl-10 w-full max-w-6xl"
+          placeholder="Search Movies..."
+        />
+      </div>
+    </nav>
+    <main class="flex flex-row mx-auto container max-w-6xl">
+      <div class="space-y-4 p-2 w-full max-w-[10rem]">
+        <h2 class="text-2xl">Filters</h2>
+        <div>
+          <label for="sort-selector" class="block text-lg font-medium mb-1">Sort by Year:</label>
+          <select id="sort-selector" class="w-full p-1 text-sm bg-gray-800 text-white border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+            <option value="desc" selected>Newest First</option>
+            <option value="asc">Oldest First</option>
+          </select>
+        </div>
+        <h3 class="text-xl">Genres</h3>
+        <div id="filters-container" class="text-xl-space-y-2">
+         
+        </div>
+      </div>
+
+      <div
+        id="movies-wrapper"
+        class="w-full max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-6 place-content-center p-4"
+      >
+        
+        </div>
+      </div>
+    </main>
+    <script src='https://cdn.jsdelivr.net/npm/meilisearch@latest/dist/bundles/meilisearch.umd.js'></script>
+   <script src="script.js"></script>
+  </body>
+</html>
